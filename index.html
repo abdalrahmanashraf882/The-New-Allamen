@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="png" href="images/">
+    
+    <!-- لكتابة وصف للموقع في محرك البحث -->
+    <meta name="description" content="اكتشف أروع الأماكن السياحية و الثقافية في محافظة مطروح,معالم تارخية و 
+    طبيعة خلابة,موقع(رحلة مطروح) سيكون دليلك الشامل في هذه الرحلة الشيقة,استعد لمغامرتك">
+    
+    <!-- كلمات مفتاحية يستخدمها الناس في محرك البحث تخص الموقع -->
+    <meta name="keywords" content="محافظة مطروح, سياحة مطررح, معالم مطروح السياحية, مطروح, شواطئ مطروح">
+    
+    <!-- اسم المؤلف أو صاحب الموقع -->
+    <meta name="author" content="عبدالرحمن أشرف حكيم">
+
+    <!-- التحكم في سلوك الزواحف (Robots) -->
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="رحلة العالمين الحديدة">
+    <meta property="og:description" content="اكتشف أروع الأماكن السياحية و الثقافية في محافظة مطروح,معالم تارخية و 
+    طبيعة خلابة,موقع(رحلة مطروح) سيكون دليلك الشامل في هذه الرحلة الشيقة,استعد لمغامرتك">
+    <meta property="og:image" content="/images/Rommel-Beach-View.jpg">
+    <meta property="og:url" content="/index.html">
+
+    <title>رحلة العالمين الجديدة</title>
+    <link rel="stylesheet" href="CSS/animate.min.css">
+    <link rel="stylesheet" href="CSS/aos.css">
+    <link rel="stylesheet" href="CSS/leaflet.css">
+    <link rel="stylesheet" href="CSS/swiper.css">
+    <link rel="stylesheet" href="CSS/fonts.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/matroh.css">
+    <link rel="stylesheet" href="CSS/Responsive.css">
+</head>
+<body>
+<!-- setting-box start -->
+<div class="setting-box">
+  <div class="toggle-settings">
+    <i class="fa fa-gear"></i>
+  </div>
+  <div class="setting-container">
+    
+    <div class="option-box">
+      <h4>الألوان</h4>
+      <ul class="colors-list">
+        <li class="active" data-color="rgb(13, 209, 235)"></li>
+        <li data-color="#ff0000"></li>
+        <li data-color="#b91afb"></li>
+        <li data-color="#3add12"></li>
+        <li data-color="#ffc107"></li>
+      </ul>
+    </div>
+
+    <div class="option-box">
+      <h4>تغيير الخلفية</h4>
+      <div class="option-btu">
+        <span class="yes active" data-background="yes">نعم</span>
+        <span class="no" data-background="no">لا</span>
+      </div>
+    </div>
+
+    <div class="option-box balls">
+      <h4>اظهار الإختصارات</h4>
+      <div class="bullets-option">
+        <span class="yes active" data-display="show">نعم</span>
+        <span class="no" data-display="hide">لا</span>
+      </div>
+    </div>
+
+    <button class="reset-options"> إعادة ضبط الإعدادات</button>
+
+  </div>
+</div>
+<!-- setting-box end -->
+<!-- start nav bullets -->
+<div class="nav-bullets">
+  <div class="bullet" data-section=".landing-page">
+    <i class="icon fa fa-home"></i>
+    <div class="nav-tooltip">الشاشة الرئيسية</div>
+  </div>
+
+  <div class="bullet" data-section=".matrouh-info">
+    <i class="icon fa fa-info"></i>
+    <div class="nav-tooltip">عن محافظة مطروح</div>
+  </div>
+
+  <div class="bullet" data-section=".FPM">
+    <i class="icon fa fa-star"></i>
+    <div class="nav-tooltip">أشهر الأماكن</div>
+  </div>
+
+  <div class="bullet" data-section=".report">
+    <i class="icon fas fa-circle-exclamation"></i>
+    <div class="nav-tooltip">الإبلاغ و الإقتراحات</div>
+  </div>
+
+  <div class="bullet" data-section=".about-us">
+    <i class="icon  fas fa-user"></i>
+    <div class="nav-tooltip">من أكون</div>
+  </div>
+
+</div>
+<!-- end nav bullets -->
+<!-- header start -->
+<div class="landing-page">
+  <div class="overlay"></div>
+  <div class="my-container">
+    <div class="header-area">
+      <div class="links-container">
+        <ul class="links">
+          <li><a href="#about-us" data-section=".about-us"> من أكون</a></li>
+          <li><a href="#report" data-section=".report"> الإبلاغ و الإقتراحات</a></li>
+          <li><a href="#matrouh-info" data-section=".matrouh-info">نبذة عن المحافظة</a></li>
+          <li><a href="#FPM" data-section=".FPM">أشهر الأماكن</a></li>
+          <li><a href="#landing-page" data-section=".landing-page" class="active">الصفحة الرئيسية</a></li>
+        </ul>
+        <button class="toggle-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="logo">مدينة العالمين الجديدة </div>
+    </div>
+  </div>
+  <div class="introduction-text">
+    <h1 class="animate__animated animate__bounceInDown">موقع <span>مدينة العالمين الجديدة </span> يرحب بكم</h1>
+  </div>
+</div>
+
+<!-- header page end -->
+
+<!-- Matrouh info start -->
+<div class="matrouh-info">
+  <div class="my-container">
+
+
+    <div class="video">
+      <video src="Videos/مدينه العلمين الجديده - New Alamein City(480P).mp4"controls  autoplay style="width:100% ;"></video>
+      <p> ٍِGamal abdelnaser Real estate صاحب الفديو من قناة علي اليوتيوب</p>
+    </div>
+
+    <div class="text">
+      <h1 class="h1 animate__animated animate__backInRight animate__delay-3s"></h1>
+      <p class="p-1 animate__animated animate__backInRight animate__delay-4s">
+        تُعدّ مدينة العالمين الجديدة واحدةً من أضخم المشاريع القومية في تاريخ مصر الحديث،
+        تقع على الساحل الشمالي الغربي على بُعد نحو 106 كيلومترات غرب الإسكندرية.
+        تمتد على مساحة تزيد على 48,000 فدان وصُمِّمت لتستوعب أكثر من ثلاثة ملايين نسمة. تضمّ المدينة أحياءً سكنية متكاملة، ومناطق ترفيهية وسياحية راقية، وأبراجًا شاهقة تُضاهي كبرى عواصم العالم
+        ، إلى جانب الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري. إنها بوابة مصر نحو مستقبل عمراني مشرق ونموذج حضاري متكامل يُعبّر عن طموح الدولة المصرية في التنمية والتطوير.
+      </p>
+    </div>
+    
+    <div id="map"></div>
+
+  </div>
+</div>
+<!-- Matrouh info end -->
+
+<!-- stats counter start -->
+<div class="stats-section">
+  <div class="my-container">
+    <div class="stats-grid">
+
+      <div class="stat-item">
+        <i class="fa fa-expand-arrows-alt"></i>
+        <span class="counter" data-target="48000">0</span>
+        <span class="stat-unit">فدان</span>
+        <p>المساحة الإجمالية</p>
+      </div>
+
+      <div class="stat-item">
+        <i class="fa fa-users"></i>
+        <span class="counter" data-target="3000000">0</span>
+        <span class="stat-unit">نسمة</span>
+        <p>الطاقة الاستيعابية</p>
+      </div>
+
+      <div class="stat-item">
+        <i class="fa fa-road"></i>
+        <span class="counter" data-target="106">0</span>
+        <span class="stat-unit">كم</span>
+        <p>غرب الإسكندرية</p>
+      </div>
+
+      <div class="stat-item">
+        <i class="fa fa-building"></i>
+        <span class="counter" data-target="20">0</span>
+        <span class="stat-unit">+</span>
+        <p>مشروع سياحي</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- stats counter end -->
+
+<!-- famous places start -->
+<div class="FPM">
+  <div class="my-container">
+    <h2> معرض الصور</h2>
+    <div class="images-box">
+      <img loading="lazy" src="images/تنزيل.jpg" alt="أبراج نورث إيدج"">
+      <img loading="lazy" src="images/تنزيل (1).jpg" alt="الممشى السياحي">
+      <img loading="lazy" src="images/تنزيل (2).jpg" alt="مسجد المولي">
+      <img loading="lazy" src="images/تنزيل (3).jpg" alt=" جامعة العالمين الدولية">
+      <img loading="lazy" src="images/تنزيل (4).jpg" alt="داون تاون العالمين الجديدة ">
+      <img loading="lazy" src="images/تنزيل (5).jpg" alt="داون تاون العالمين الجديدة 2">
+      <img loading="lazy" src="images/تنزيل (6).jpg" alt="جامعة العلمين الدولية 2">
+      <img loading="lazy" src="images/تنزيل (7).jpg" alt="مسجد المولي 2">
+      <img loading="lazy" src="images/تنزيل (8).jpg" alt="الممشي السياحي 2">
+    </div>
+  </div>
+</div>
+<!-- famous places end -->
+
+<!-- report start -->
+<div class="report">
+  <div class="overlay"></div>
+  <div class="my-container">
+    <h2>قسم الإبلاغات و الإقتراحات</h2>
+    <form id="report-form" novalidate>
+      <div class="left">
+        <div class="form-group">
+          <label>الاسم <span class="required">*</span></label>
+          <input type="text" id="username" name="from_name" placeholder="اسمك">
+          <span class="error-msg" id="err-name">هذا الحقل مطلوب</span>
+        </div>
+        <div class="form-group">
+          <label>رقم الهاتف</label>
+          <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف">
+        </div>
+        <div class="form-group">
+          <label>الإيميل <span class="required">*</span></label>
+          <input type="email" id="email" name="from_email" placeholder="إيميلك">
+          <span class="error-msg" id="err-email">بريد إلكتروني غير صحيح</span>
+        </div>
+        <div class="form-group">
+          <label>الموضوع</label>
+          <input type="text" id="subject" name="subject" placeholder="الموضوع">
+        </div>
+      </div>
+      <div class="right">
+        <div class="form-group">
+          <label>الرسالة <span class="required">*</span></label>
+          <textarea id="message" name="message" placeholder="اكتب هنا..."></textarea>
+          <span class="error-msg" id="err-msg">هذا الحقل مطلوب</span>
+        </div>
+        <button type="submit" class="submit-btn">إرسال</button>
+        <div class="status-msg" id="form-status"></div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- report end -->
+
+<!-- About us start -->
+<!-- About us start -->
+<div class="about-us">
+  <div class="my-container">
+
+    <div class="info-box">
+      <h2>عن مدينة العالمين الجديدة</h2>
+      <p>
+        مدينة العالمين الجديدة واحدة من أضخم المشاريع القومية في تاريخ مصر الحديث،
+        تقع على الساحل الشمالي الغربي على بُعد نحو 106 كيلومترات غرب الإسكندرية.
+        تمتد على مساحة تتجاوز 48,000 فدان وتستوعب ما يزيد على 3 ملايين نسمة.
+        <br><br>
+        تضم المدينة أبراجاً شاهقة تُعدّ من الأطول في أفريقيا، إلى جانب منتجعات
+        سياحية فاخرة، ومراكز تجارية ضخمة، وجامعات دولية، وملاعب رياضية عالمية.
+        <br><br>
+        تُجسّد العالمين الجديدة رؤية مصر 2030 نحو التوسع العمراني خارج وادي النيل،
+        وتحوّل الساحل الشمالي إلى وجهة سياحية وحضارية على مستوى عالمي.
+      </p>
+    </div>
+
+    <div class="image-box">
+      <img src="images/تنزيل (9).jpg" alt="مدينة العالمين الجديدة" style="width: 550px;">
+    </div>
+
+  </div>
+</div>
+<!-- About us end -->
+<!-- About us end -->
+
+<!-- scroll to top start -->
+<button class="scroll-top-btn" title="العودة للأعلى">
+  <i class="fa fa-arrow-up"></i>
+</button>
+<!-- scroll to top end -->
+
+<!-- footer start -->
+
+<!-- footer start -->
+<footer class="footer">
+  <!-- موجة علوية -->
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#0d1b2a"/>
+    </svg>
+  </div>
+
+  <div class="footer-body">
+    <div class="my-container">
+
+      <!-- الشعار والوصف -->
+      <div class="footer-brand">
+        <div class="footer-logo">مدينة العالمين الجديدة</div>
+        <p class="footer-desc">بوابة مصر نحو مستقبل عمراني مشرق على الساحل الشمالي الغربي</p>
+      </div>
+
+      <!-- خط فاصل -->
+      <div class="footer-divider"></div>
+
+      <!-- أيقونات التواصل -->
+      <div class="footer-social-label">تواصل معنا</div>
+      <nav class="footer-social">
+        <a href="https://wa.me/201228530778" target="_blank" class="social-btn whatsapp" title="واتساب">
+          <i class="fab fa-whatsapp"></i>
+          <span>واتساب</span>
+        </a>
+        <a href="https://www.youtube.com/@pro01x/featured" target="_blank" class="social-btn youtube" title="يوتيوب">
+          <i class="fab fa-youtube"></i>
+          <span>يوتيوب</span>
+        </a>
+        <a href="https://t.me/201228530778" target="_blank" class="social-btn telegram" title="تيليغرام">
+          <i class="fab fa-telegram"></i>
+          <span>تيليغرام</span>
+        </a>
+        <a href="https://www.facebook.com/bdalrhmnashrf.44589/" target="_blank" class="social-btn facebook" title="فيسبوك">
+          <i class="fab fa-facebook"></i>
+          <span>فيسبوك</span>
+        </a>
+      </nav>
+
+      <!-- حقوق النشر -->
+      <div class="footer-copy">
+        <span>جميع الحقوق محفوظة &copy; 2025</span>
+        <span class="footer-author">الطالب عبدالرحمن أشرف حكيم</span>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="JS/aos.js"></script>
+  <script src="JS/bootstrap.min.js"></script>
+  <script src="JS/leaflet.js"></script> 
+  <script src="JS/jquery-1.12.4.min.js"></script>
+  <Script src="JS/main.js"></Script>
+</body>
+</html>
