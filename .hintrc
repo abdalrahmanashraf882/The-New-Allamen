@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "disown-opener": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-moz-user-select",
+          "-ms-zoom"
+        ]
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_chr <= 141",
+    "not chrome <= 141",
+    "not edge <= 141",
+    "not ios_saf <= 26",
+    "not safari <= 26",
+    "not samsung <= 28"
+  ]
+}
