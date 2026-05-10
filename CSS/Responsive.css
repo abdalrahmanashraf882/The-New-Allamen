@@ -1,5 +1,5 @@
 /* ============================================================
-   RESPONSIVE.CSS — رحلة مطروح
+   RESPONSIVE.CSS — مدينة العالمين الجديدة
    الترتيب: من الأكبر للأصغر (Desktop → Tablet → Mobile)
    ============================================================ */
 
@@ -8,7 +8,6 @@
    GRID SYSTEM — نظام الشبكة
    ============================================================ */
 
-/* موبايل صغير جداً */
 @media (max-width: 450px) {
     .my-container {
         max-width: 100%;
@@ -17,31 +16,78 @@
     }
 }
 
-/* موبايل عادي */
 @media (min-width: 576px) {
     .my-container {
         max-width: 540px;
     }
 }
 
-/* تابلت */
 @media (min-width: 768px) {
     .my-container {
         max-width: 720px;
     }
 }
 
-/* لاب توب صغير */
 @media (min-width: 992px) {
     .my-container {
         max-width: 960px;
     }
 }
 
-/* ديسكتوب */
 @media (min-width: 1200px) {
     .my-container {
         max-width: 1140px;
+    }
+}
+
+
+/* ============================================================
+   LANDING PAGE — الصفحة الرئيسية
+   ============================================================ */
+
+@media (max-width: 991px) {
+    .landing-page {
+        min-height: 100svh; /* يدعم safe area في الموبايل */
+    }
+
+    .introduction-text {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .introduction-text h1 {
+        font-size: 30px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    .introduction-text p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 575px) {
+    .introduction-text h1 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .introduction-text p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 380px) {
+    .introduction-text h1 {
+        font-size: 18px;
+    }
+
+    .introduction-text p {
+        font-size: 13px;
     }
 }
 
@@ -51,6 +97,19 @@
    ============================================================ */
 
 @media (max-width: 991px) {
+    .header-area {
+        padding: 12px 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .header-area .links-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
     .header-area .links {
         display: none;
     }
@@ -60,22 +119,19 @@
         display: block;
         position: absolute;
         left: 0;
-        top: 64px;
+        top: 60px;
         width: 100%;
         border-radius: 4px;
         text-align: right;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
-        -o-border-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        z-index: 9999;
     }
 
     .header-area .links.open li {
         display: block;
-        margin: 10px;
+        margin: 0;
         border-bottom: 1px solid #f0f0f0;
-        padding-bottom: 10px;
+        padding: 10px 15px;
     }
 
     .header-area .links.open li:last-child {
@@ -85,19 +141,37 @@
     .header-area .links.open li a {
         color: var(--main-color);
         font-weight: bold;
-        font-size: 16px;
+        font-size: 15px;
+        display: block;
     }
 
     .header-area .toggle-menu {
         display: inline-block;
+        margin-top: 0;
     }
 }
 
 @media (max-width: 768px) {
     .header-area .logo {
-        font-size: 17px;
+        font-size: 15px;
         width: auto;
-        padding: 10px;
+        padding: 8px;
+    }
+
+    .header-area .toggle-menu {
+        width: 34px;
+    }
+
+    .header-area .toggle-menu span {
+        height: 3px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    .header-area .logo {
+        font-size: 13px;
+        padding: 6px;
     }
 }
 
@@ -109,17 +183,23 @@
 @media (max-width: 450px) {
     .setting-box {
         z-index: 99999;
+        width: 180px;
+        left: -180px;
+    }
+
+    .setting-box.open {
+        left: 0;
     }
 
     .setting-box .toggle-settings {
         top: 110px;
-        right: -35px;
+        right: -32px;
     }
 
     .setting-box .toggle-settings .fa-gear {
         padding: 8px 0;
-        width: 25px;
-        font-size: 20px;
+        width: 22px;
+        font-size: 18px;
     }
 
     .setting-box .option-box {
@@ -128,13 +208,14 @@
     }
 
     .setting-box .option-box h4 {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .setting-box .reset-options {
-        width: 170px;
+        width: 160px;
         padding: 8px;
         margin: 8px auto;
+        font-size: 13px;
     }
 
     .setting-box .option-box.balls {
@@ -148,152 +229,255 @@
 
 
 /* ============================================================
-   LANDING PAGE — الصفحة الرئيسية
+   NAV BULLETS — أزرار التنقل
    ============================================================ */
 
 @media (max-width: 768px) {
-    .introduction-text h1 {
-        font-size: 34px;
+    .nav-bullets {
+        width: 40px;
     }
 
-    .introduction-text p {
-        font-size: 20px;
+    .nav-bullets .bullet {
+        width: 26px;
+        height: 26px;
+        margin: 8px auto;
+    }
+
+    .bullet .icon {
+        font-size: 11px;
+    }
+
+    .nav-bullets .bullet .nav-tooltip {
+        width: 85px;
+        font-size: 11px;
+        right: 34px;
+    }
+}
+
+
+/* ============================================================
+   MATROUH INFO — قسم معلومات المدينة
+   ============================================================ */
+
+/* إصلاح رئيسي: المارجن الكبير يسبب overflow على الموبايل */
+@media (max-width: 991px) {
+    .matrouh-info .my-container {
+        margin: 0 15px;
     }
 }
 
 @media (max-width: 575px) {
-    .introduction-text h1 {
+    .matrouh-info .my-container {
+        margin: 0 8px;
+        padding: 0 8px;
+    }
+}
+
+/* إصلاح الـ iframe ليكون responsive */
+@media (max-width: 991px) {
+    .video iframe {
+        height: 400px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .video iframe {
+        height: 300px !important;
+    }
+
+    .matrouh-info .h1 {
         font-size: 26px;
     }
 
-    .introduction-text p {
-        font-size: 16px;
-        line-height: 1.7;
-    }
-}
-
-
-/* ============================================================
-   MATROUH INFO — قسم معلومات المحافظة
-   ============================================================ */
-
-@media (max-width: 768px) {
-    .matrouh-info .my-container {
-        margin: 0 15px;
-    }
-
-    .matrouh-info .h1 {
-        font-size: 28px;
-    }
-
     .matrouh-info .p-1 {
-        font-size: 18px;
-    }
-
-    .matrouh-info .p-2 {
-        font-size: 22px;
-        margin-top: 80px;
+        font-size: 17px;
+        text-indent: 25px;
     }
 
     .matrouh-info .p-3 {
-        font-size: 22px;
-    }
-
-    .matrouh-info .button {
-        position: static;
-        display: block;
-        margin: 15px auto;
-        width: 280px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 450px) {
-    .matrouh-info .my-container {
-        margin: 0 8px;
-    }
-
-    .matrouh-info .h1 {
-        font-size: 22px;
-    }
-
-    .matrouh-info .p-1 {
-        font-size: 15px;
-        text-indent: 20px;
-    }
-
-    .matrouh-info .p-2 {
-        font-size: 18px;
-        margin-top: 50px;
-        line-height: 1.9;
-    }
-
-    .matrouh-info .p-3 {
-        font-size: 18px;
-    }
-
-    .matrouh-info .button {
-        position: static;
-        display: block;
-        margin: 15px auto;
-        width: 90%;
-        font-size: 16px;
-    }
-}
-
-
-/* ============================================================
-   FAMOUS PLACES — أشهر الأماكن
-   ============================================================ */
-
-@media (max-width: 768px) {
-    .FPM h2 {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-
-    .FPM .images-box img {
-        width: 160px;
-        height: 120px;
-    }
-}
-
-@media (max-width: 450px) {
-    .FPM h2 {
         font-size: 20px;
-        margin-bottom: 20px;
+    }
+
+    .matrouh-info .button {
+        position: static;
+        display: block;
+        margin: 15px auto;
+        width: 80%;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    /* إصلاح الخريطة */
+    .matrouh-info #map {
+        height: 300px !important;
+        width: 100% !important;
+        margin-top: 50px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .video iframe {
+        height: 220px !important;
+    }
+
+    .matrouh-info .h1 {
+        font-size: 20px;
+    }
+
+    .matrouh-info .p-1 {
+        font-size: 14px;
+        text-indent: 18px;
+        line-height: 1.8;
+    }
+
+    .matrouh-info .p-3 {
+        font-size: 17px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .matrouh-info .button {
+        width: 90%;
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .matrouh-info #map {
+        height: 240px !important;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .video iframe {
+        height: 190px !important;
+    }
+
+    .matrouh-info #map {
+        height: 200px !important;
+    }
+}
+
+
+/* ============================================================
+   STATS COUNTER — العداد الإحصائي
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .stats-section {
+        padding: 35px 0;
+        margin-top: 30px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+
+    .stat-item {
+        border-left: none;
+        border-bottom: 1px solid rgba(255,255,255,0.25);
+        padding: 18px 10px;
+    }
+
+    /* إزالة border من الصفين الأخيرين */
+    .stat-item:nth-child(3),
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    /* فاصل رأسي بين العمودين */
+    .stat-item:nth-child(odd) {
+        border-right: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .stat-item .counter { font-size: 30px; }
+    .stat-item .stat-unit { font-size: 16px; }
+    .stat-item i        { font-size: 26px; }
+    .stat-item p        { font-size: 13px; }
+}
+
+@media (max-width: 450px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+
+    .stat-item .counter { font-size: 24px; }
+    .stat-item .stat-unit { font-size: 13px; }
+    .stat-item p        { font-size: 12px; margin-top: 5px; }
+    .stat-item i        { font-size: 22px; margin-bottom: 8px; }
+}
+
+
+/* ============================================================
+   FAMOUS PLACES / GALLERY — معرض الصور
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .FPM {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .FPM h2 {
+        font-size: 22px;
+        margin-bottom: 25px;
     }
 
     .FPM .images-box img {
-        width: 140px;
-        height: 105px;
+        width: 155px;
+        height: 115px;
         margin: 4px;
     }
 }
 
+@media (max-width: 575px) {
+    .FPM .images-box img {
+        width: calc(50% - 12px);
+        height: 110px;
+        object-fit: cover;
+        margin: 4px;
+    }
+}
+
+@media (max-width: 380px) {
+    .FPM h2 {
+        font-size: 18px;
+    }
+
+    .FPM .images-box img {
+        width: calc(50% - 10px);
+        height: 95px;
+    }
+}
+
+/* Popup */
 @media (max-width: 768px) {
     .popup-box {
         width: 90%;
         padding: 15px;
+        max-width: 500px;
     }
 
     .popup-box img {
         width: 100%;
         height: auto;
+        max-height: 280px;
+        object-fit: cover;
     }
 }
 
 @media (max-width: 450px) {
     .popup-box img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
+        height: 200px;
     }
 }
 
 
 /* ============================================================
-   REPORT — قسم الإبلاغات
+   REPORT FORM — قسم الإبلاغات
    ============================================================ */
 
 @media (max-width: 768px) {
@@ -304,14 +488,14 @@
     }
 
     .report h2 {
-        font-size: 24px;
+        font-size: 22px;
         margin-bottom: 25px;
     }
 
-    /* تحويل العمودين لعمود واحد في التابلت والموبايل */
     .report form {
         grid-template-columns: 1fr;
         gap: 0;
+        max-width: 100%;
     }
 
     .report form .left,
@@ -320,57 +504,83 @@
     }
 
     .report form textarea {
-        height: 120px;
+        height: 130px;
     }
 }
 
 @media (max-width: 450px) {
     .report h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .report form {
         padding: 0 5px;
     }
 
+    .report .form-group label {
+        font-size: 13px;
+    }
+
+    .report form input:not(.submit-btn) {
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .report form textarea {
+        font-size: 13px;
+        height: 110px;
+    }
+
     .report .submit-btn {
-        font-size: 15px;
+        font-size: 14px;
         padding: 10px;
     }
 }
 
 
 /* ============================================================
-   ABOUT US — من أكون
+   ABOUT US — عن المدينة
    ============================================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .about-us {
         display: block;
         text-align: center;
-        padding-top: 35px;
-        padding-bottom: 35px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .about-us .my-container {
+        display: block;
+    }
+
+    /* إصلاح الصورة التي عندها inline style width: 550px */
+    .about-us .image-box img {
+        width: 100% !important;
+        max-width: 400px;
+        height: auto;
+        margin: 20px auto 0;
+        display: block;
     }
 
     .about-us .info-box {
-        padding: 15px;
+        padding: 20px 10px 10px;
     }
+}
 
+@media (max-width: 768px) {
     .about-us .info-box h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .about-us .info-box p {
         font-size: 15px;
         line-height: 2.2;
-    }
-
-    .about-us .image-box {
-        margin-top: 20px;
+        text-align: right;
     }
 
     .about-us .image-box img {
-        width: 220px;
+        max-width: 300px;
     }
 }
 
@@ -381,71 +591,75 @@
     }
 
     .about-us .info-box {
-        padding: 10px;
+        padding: 10px 5px;
     }
 
     .about-us .info-box h2 {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .about-us .info-box p {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 2;
     }
 
     .about-us .image-box img {
-        width: 180px;
+        max-width: 220px;
     }
 }
 
-/* ===== STATS RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .stat-item {
-        border-left: none;
-        border-bottom: 1px solid rgba(255,255,255,0.3);
-    }
-
-    .stat-item:nth-child(3),
-    .stat-item:last-child {
-        border-bottom: none;
-    }
-
-    .stat-item .counter { font-size: 32px; }
-    .stat-item i        { font-size: 28px; }
-}
+/* ============================================================
+   SCROLL TO TOP BUTTON
+   ============================================================ */
 
 @media (max-width: 450px) {
-    .stats-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .stat-item .counter { font-size: 26px; }
-    .stat-item p        { font-size: 13px; }
-
     .scroll-top-btn {
-        bottom: 20px;
-        left: 15px;
-        width: 42px;
-        height: 42px;
-        font-size: 16px;
+        bottom: 18px;
+        left: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
     }
 }
 
-/* ===== FOOTER RESPONSIVE ===== */
+
+/* ============================================================
+   FOOTER — الفوتر
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .footer-body {
+        padding: 30px 0 20px;
+    }
+
+    .footer-logo {
+        font-size: 22px;
+    }
+
+    .footer-desc {
+        font-size: 13px;
+    }
+
+    .footer-social-label {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 576px) {
     .footer-wave svg {
         height: 50px;
     }
 
     .footer-logo {
-        font-size: 20px;
+        font-size: 18px;
     }
 
+    .footer-desc {
+        font-size: 12px;
+    }
+
+    /* إخفاء النص وإظهار الأيقونة فقط */
     .social-btn span {
         display: none;
     }
@@ -462,5 +676,20 @@
     .footer-copy {
         flex-direction: column;
         gap: 4px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .footer-social {
+        gap: 8px;
+    }
+
+    .social-btn {
+        padding: 10px 12px;
+    }
+
+    .social-btn i {
+        font-size: 16px;
     }
 }
